@@ -1,0 +1,77 @@
+---
+title: "Internet sports betting in 2005" 
+subtitle: "Datamart creation and insights"
+author: "Abdon Ahuile,Annatol Bannem, Charles Payet "
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Abstract 
+
+For this project we used the different tables provided from an internet
+sports betting website in order to create a final data mart which summarizes the behaviour and also includes the demographic behaviour of the clients. The final output isa table of one row per User Id with 51 different variables.
+
+## Libraries  
+
+The required libraries for making these project are the following:
+```{r loading_packages, message = FALSE}
+library(haven)
+library(dplyr)
+library(tidyr)
+library(data.table)
+library(ggplot2)
+library(shiny)
+```
+## Analysis
+
+
+### Data Preprocessing
+
+The tables used to make the final merge in order to make the final datamart are "Demograpics", "AnalyticDataInternetGambling" which where provided beforehand? This where merged with tables "pokerchipfinal" and "dailyfinal" which come from "RawDataIIIPokerChipConversions" and "RawDataIIUserDailyAggregation" which contained repeated User Ids, therefore they where summarized to have one observation per client.
+
+### Relevant analysis
+
+
+![Total bets grouped by users who speak different languages .](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/language_graph.png)
+
+As it can be observed the German speaking users have accumulated the most amount of bets during the period of the data provided. 
+
+![Density graph of Gender and country.](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/density_gender_country.png)
+
+In the graph above it can be noticed that in every country in which a betting service provider is being used, this service is predominatly used by males (at least for the users which have given their gender information).
+
+![Bets by Country.](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/BetsByCountry.png)
+
+With the above graph, we can notice that Germany has the highest betting habit among all the countries.
+
+![Bets by Applications.](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/App_desc.png)
+
+With the help the graph, we can easily say that the most common app used by Gamblers is BETANDWIN.COM followed by BETANDWIN.DE
+
+![Avg of Customers by Country](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/CustomersByCountry.png)
+
+On the graph above, the betting company can notice that the majority of their customers are coming from Germany.
+
+![Products consumed by Customers](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/Customers_By_Product.png)
+
+On this graph, the betting company can launch a marketing process on the product 1(Sports book fixed-odd) since it's the Customers favorite.
+
+![Customers Age](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/Customers_Age.png)
+
+On this graph, the betting comapny can try to target the customers around 35 years old and below (With a peak at 31 years old) since they are the most interrested in the betting activity.
+
+![What country is buying pokerchip](C:/Users/cpayet/Documents/GitHub/OpenSourceProgramming/R_Group_Assignment_Group4/PokerchipsBoughtByCountry.png)
+
+On this graph, we can notice that Denmark is the country with the highest Pokerchip Buying behaviour. The betting company can use this to set their future selling target.
+
+
+
+
+
+
+
+
